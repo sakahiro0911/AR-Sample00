@@ -1,9 +1,76 @@
 <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+  <title>WebAR for All Browsers</title>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .ar-model {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 400px;
+  }
+  .ar-caption {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  .ar-text {
+    padding: 0 1rem;
+  }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>WebAR by Model Viewer</h1>
+  <figure class="ar-img">
+    <model-viewer class="ar-model" poster="duck.png" src="duck.gltf" ios-src="duck.usdz" auto-rotate camera-controls ar alt="アヒル"></model-viewer>
+    <figcaption class="ar-caption">&copy; Robert Mirabelle</figcaption>
+  </figure>
+  <p class="ar-text">model-viewerはほぼ全てのブラウザーでAR体験を可能にします。</p>
+   <p>iOSの方はこちらから</p>
+  <!--<a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNote に戻る</button></a>-->
+  <div>
+  <a href="cat.usdz" rel="ar" >
+    🐈
+  </a>
+  <a href="dog.usdz" rel="ar" >
+    🐕
+  </a>
+  <a href="parrot.usdz" rel="ar" >
+    🦜
+  </a>
+  </div>
+</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>TipsNote : GitHub Pages Sample</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+
 </head>
 
 <body>
@@ -20,6 +87,8 @@
   <a href="parrot.usdz" rel="ar" >
     🦜
   </a>
+
+  <model-viewer preload poster="img/earth.gif" src="img/earth_ball.gltf" ios-src="img/earth_ball.usdz" auto-rotate camera-controls ar alt="サンプル"></model-viewer>
 
 </main>
 
