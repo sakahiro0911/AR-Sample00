@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+  <title>WebAR for All Browsers</title>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.0rem;
+  }
+  .wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .ar-model {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 400px;
+  }
+  .ar-caption {
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+  }
+  .ar-text {
+    padding: 0 1rem;
+  }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <h1>WebAR サンプル</h1>
+  <p></p><p></p>
+  <h2>Androidの方はこちらから</h2>
+  <figure class="ar-img">
+    <model-viewer class="ar-model" poster="WaterBottle.jpg" src="WaterBottle.glb" ios-src="cupandsaucer.usdz" auto-rotate camera-controls ar alt="WaterBottle"></model-viewer>
+    <figcaption class="ar-caption">WaterBottle</figcaption>
+  </figure>
+  <p></p><p></p><p></p>
+  <br/><br/>
+  <h2>iOSの方はこちらから</h2>
+  <!--<a href="http://www.tam-tam.co.jp/tipsnote/"><button>TipsNote に戻る</button></a>-->
+  <div>
+  <figure class="ar-img">
+  <a href="cupandsaucer.usdz" rel="ar" >
+     <img src="cupandsaucer.jpg"  >
+  </a>
+  <figcaption class="ar-caption">cupandsaucer</figcaption>
+  </figure>
+   <figure class="ar-img">
+   <a href="cat.usdz" rel="ar" >
+     <img src="cat.png"  >
+   </a>
+  <figcaption class="ar-caption">cat</figcaption>
+  </figure>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
